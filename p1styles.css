@@ -1,0 +1,440 @@
+/********f************
+    
+    Project 1 Stylesheet
+    Name: Wei Wang
+    Date: October 14, 2024
+    Description: Create a valid HTML5 page and a corresponding external CSS file that will simulate what the mock is presenting.
+
+*********************/
+
+html,
+body,
+section,
+p,
+header,
+nav,
+footer,
+div,
+article,
+aside,
+ol,
+ul,
+li,
+h1,
+h6 {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #e6e6e6;
+}
+
+div#container {
+	width: 810px;
+	background-color: #fff;
+	border-radius: 8px;
+	margin: 10px auto;
+	padding: 10px 10px 5px 10px;
+	box-shadow: 1px 1px 2px #a2a2a2, -1px -1px 2px #a2a2a2;
+}
+
+
+
+/* Student Code */
+/* box shadow */
+div#container {
+	position: relative;
+	overflow: hidden;
+	z-index: 1;
+}
+
+div#container::after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 50px;
+	background: linear-gradient(to top, #e4e4e4, transparent);
+	z-index: -1;
+}
+
+li {
+
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+/* header Style */
+header div#head {
+	display: flex;
+	justify-content: space-between;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header div#head div {
+	height: 50px;
+}
+
+header div#head div#logo {
+	width: 100px;
+}
+
+header div#head div#menu ul {
+	scale: 1 .9;
+	display: flex;
+	height: 100%;
+	align-items: flex-end;
+}
+
+header div#head div#menu ul li {
+	height: 14px;
+	/* margin-bottom: 4px; */
+	padding: 0px 8px;
+	font-family: Verdana;
+	font-size: 12px;
+}
+
+header div#head div#menu ul li:not(li:last-of-type) {
+	border-right: 1.3px solid #006699;
+}
+
+header div#head div#menu ul li a {
+	color: #006699;
+	transition: 1s;
+}
+
+header div#head div#menu ul li a:hover {
+	color: #d43b08;
+}
+
+header div#head div#menu ul li a:focus {
+	color: #10d806;
+}
+
+header div#head div#search {
+	display: flex;
+	align-items: flex-end;
+	padding-bottom: 10px;
+}
+
+header div#head div#search form input {
+	width: 83px;
+	height: 20px;
+	padding: 0;
+	border: 1px solid #9c9c9c;
+}
+
+header div#head div#search form button {
+	width: 45px;
+	height: 18px;
+
+	font-size: 9px;
+	text-align: center;
+
+	border: 1px solid #9c9c9c;
+	border-radius: 0%;
+}
+
+
+/* headerBackground Style  */
+div#banner {
+	position: relative;
+	width: 100%;
+	height: 195px;
+	background-image: url(./images/headerBackground.jpg);
+	color: #eeeeee;
+}
+
+div#banner div {
+	font-size: 33px;
+	/* letter spacing */
+	letter-spacing: 7px;
+	font-family: Verdana;
+
+	position: absolute;
+	top: 29px;
+	left: 28px;
+}
+
+div#banner em {
+	font-weight: 400;
+	font-size: 14px;
+	font-family: Verdana;
+
+	letter-spacing: 1px;
+	position: absolute;
+	bottom: 18px;
+	right: 42px;
+}
+
+/* Navigation Style */
+nav {
+	padding-left: 90px;
+	padding-right: 90px;
+	height: 25px;
+	background: linear-gradient(to bottom, #99ccff, #03689b);
+}
+
+nav ol {
+
+	height: 100%;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+
+nav ol li {
+	height: 14px;
+	font-size: 12px;
+	font-weight: 700;
+	/* text vertically centred */
+	line-height: 14px;
+	text-align: center;
+	padding-left: 13px;
+	padding-right: 13px;
+}
+
+nav ol li:not(li:first-of-type) {
+	border-left: 1px solid #ffffff;
+	box-shadow: -.5px 0px #000000;
+}
+
+nav ol li a {
+	color: #eeeeee;
+	transition: 1s;
+}
+
+nav ol li a:hover {
+	color: #d43b08;
+}
+
+nav ol li a:focus {
+	color: #10d806;
+}
+
+
+/* main */
+main#content {
+	display: flex;
+	font-family: Verdana;
+}
+
+main#content div#main-body {
+	flex: 3;
+	/* background: skyblue; */
+	margin-left: 20px;
+	margin-right: 10px;
+}
+
+main#content span {
+	font-size: 10px;
+}
+
+main#content span a {
+	color: #006699;
+	transition: 1s;
+}
+
+main#content span a::after {
+	color: #000000;
+	content: " »";
+}
+
+main#content span a:hover {
+	color: #d43b08;
+}
+
+main#content span a:focus {
+	color: #10d806;
+}
+
+
+main#content h1#title {
+	margin-top: 18px;
+	font-size: 16px;
+	font-weight: 700;
+	padding: 7px 0px;
+	border-bottom: 1px solid #dddddd;
+}
+
+main#content div#main-body article {
+	font-size: 12px;
+	line-height: 20px;
+}
+
+main#content div#main-body article h6 {
+	font-size: 14px;
+	margin: 10px 0px;
+	padding: 0;
+}
+
+main#content div#main-body article p {
+	margin: 10px 0px 20px 0px;
+}
+
+main#content div#main-body article a {
+	color: #006699;
+	font-weight: 700;
+}
+
+main#content div#main-body article a:hover {
+	color: #d43b08;
+}
+
+main#content div#main-body article a:focus {
+	color: #10d806;
+}
+
+main#content div#main-body article div#rover {
+	border: 1px solid #9c9c9c;
+	padding: 5px;
+	float: right;
+	/* align img and p */
+	display: flex;
+	flex-direction: column;
+}
+
+main#content div#main-body article div#rover p {
+	margin: 6px 0px;
+	padding: 0px;
+	width: 245px;
+	font-size: 11px;
+	line-height: 12px;
+}
+
+main#content div#main-body article div.links {
+	margin: 20px 0px 20px 25px;
+}
+
+/* aside */
+main#content aside {
+	flex: 1;
+}
+
+main#content aside li {
+	height: 30px;
+	background: linear-gradient(to bottom, #f0f1f0, #cdcdcd);
+	border-bottom: 1px solid #9c9c9c;
+	padding-left: 10px;
+}
+
+main#content aside li a,
+main#content aside li span {
+	color: #000000;
+	font-size: 10px;
+	font-weight: 700;
+	line-height: 30px;
+	position: relative;
+}
+
+main#content aside li a {
+	margin-left: 12px;
+	transition: 1s;
+}
+
+/* dots before a */
+main#content aside li a::before {
+	content: "";
+	position: absolute;
+	top: 4px;
+	left: -12px;
+	width: 6px;
+	height: 6px;
+	border-radius: 50%;
+	background-color: black;
+}
+
+main#content aside li:not(li:first-of-type):hover {
+	background: linear-gradient(to bottom, #99ccff, #03689b);
+}
+
+
+/* The dots dispear. */
+main#content aside li:not(li:first-of-type):hover a::before {
+	display: none;
+}
+
+main#content aside li a:hover {
+	color: #ffffff;
+}
+
+main#content aside li a:focus {
+	color: #10d806;
+}
+
+main#content aside div#nasa {
+	padding: 7px 0px 0px 0px;
+	font-size: 11.5px;
+	line-height: 13px;
+	color: #666666;
+	margin-top: 40px;
+	border-top: 1px solid #cccccc;
+}
+
+main#content aside div#nasa img {
+	float: right;
+}
+
+/* footer style */
+footer {
+	margin-top: 73px;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-size: 11px;
+	transform: scale(1, 0.9);
+	display: flex;
+	flex-direction: column;
+}
+
+footer a {
+	color: #006699;
+}
+
+footer a:hover {
+	color: #d43b08;
+}
+
+footer a:focus {
+	color: #10d806;
+}
+
+footer div.footer-menu ul {
+	display: flex;
+	justify-content: center;
+}
+
+footer div.footer-menu ul li:not(li:last-of-type)::after {
+	margin: 0px 6px;
+	content: "|";
+}
+
+footer div.copyright {
+	display: flex;
+	justify-content: center;
+}
+
+footer div.address {
+	display: flex;
+	justify-content: center;
+	color: #9c9c9c;
+}
+
+footer div.address a::before {
+	content: "|";
+	color: #000000;
+	margin: 0px 6px;
+}
+
+/* media query: for multiple resolution */
+@media (max-width: 600px) {
+	body div#container section main#content {
+		display: flex;
+		flex-direction: column;
+	}
+}
